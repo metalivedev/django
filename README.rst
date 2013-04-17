@@ -7,13 +7,14 @@ to do to deploy it: it automatically deploys a PostgreSQL database,
 includes it in ``settings.py``, creates a superuser for you, and uses
 Django 1.3 ``collectstatic``. *Batteries Included!*
 
-To run this code on DotCloud, you need a `DotCloud account
-<https://www.dotcloud.com/accounts/register/>`_ (free tier available).
+To run this code on DotCloud, you need a `dotCloud account
+<https://www.dotcloud.com/accounts/register/>`_ .
 Then clone this repository, and push it to DotCloud::
 
   $ git clone git://github.com/jpetazzo/django.git
   $ cd django
-  $ dotcloud push hellodjango
+  $ dotcloud create -f live hellodjango
+  $ dotcloud push
 
 Happy hacking! Remember: each time you modify something, you need to
 git add + git commit your changes before doing ``dotcloud push``.
@@ -33,10 +34,10 @@ with at least three different methods:
   repository, for a text-mode equivalent (with the added benefit of being
   available offline!);
 * by browsing a more `traditional version 
-  <http://docs.dotcloud.com/tutorials/python/django/>`_ on DotCloud's
+  <http://docs.dotcloud.com/tutorials/python/django/>`_ on dotCloud's
   documentation website.
 
-You can also learn more by diving into `DotCloud documentations
+You can also learn more by diving into `dotCloud documentations
 <http://docs.dotcloud.com/>`_, especially the one for the `Python service
 <http://docs.dotcloud.com/services/python/>`_ which is used by this app.
 
